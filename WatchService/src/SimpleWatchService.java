@@ -7,7 +7,7 @@ public class SimpleWatchService {
 
     public static void main(String[] args) throws IOException, InterruptedException {
         WatchService watchService = FileSystems.getDefault().newWatchService();
-        Path path = Paths.get("/Users/red/pro/java/NIO/");
+        Path path = Paths.get("/Users/red/pro/java/java-nio-example/");
         path.register(watchService, ENTRY_CREATE, ENTRY_MODIFY, ENTRY_DELETE);
         boolean poll = true;
         while (poll) {
